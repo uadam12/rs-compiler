@@ -1,0 +1,61 @@
+.school-info {
+    padding: 0 20px 30px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 10px;
+}
+
+.class-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
+.level.btn {background-color: blue;}
+
+h2 {color: crimson; margin-bottom: 15px;}
+#subject {list-style-image: url('/arrow.png');}
+li {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    padding: 12px;
+    position: relative;
+}
+li:nth-child(odd) {background-color: #dedede;}
+
+.checked {
+    color: green;
+    text-decoration: underline;
+}
+#subject > li::before {
+    content: "";
+    display: inline-block;
+    width: 7px;
+    height: 12px;
+    margin-right: 10px;
+}
+.checked::before {
+    border: 3px solid green;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: inherit;
+    transition: .5s;
+}
+.close:hover {
+    background-color: crimson;
+    color: white;
+}
+.new-subject {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.save {margin-top: 30px;}
+.save > .btn {background-color: crimson;}

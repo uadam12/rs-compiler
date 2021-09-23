@@ -1,0 +1,27 @@
+h2 {
+    background-color: teal;
+    color: wheat;
+    outline: 10px solid teal;
+    border: 2px solid white;
+    padding: 3px 20px;
+    margin: 10px auto 50px;
+    width: fit-content;
+    text-align: center;
+}
+.sheet {
+    margin: 15px auto;
+    overflow-x: auto;
+}
+.result {
+    border: 3px solid teal;
+    border-collapse: collapse;
+    min-width: 650px;
+    width: 100%;
+}
+.result tr:nth-child(odd) {background-color: #ddd;}
+.result th, .result td {
+    border: 1px solid teal;
+    padding: 5px 3px;
+    text-align: center;
+}
+.result th:nth-child(2) {text-align: left;}
