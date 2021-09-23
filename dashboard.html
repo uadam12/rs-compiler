@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Students</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sheet.css">
+    <script src="js/functions.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/msg.js"></script>
+    <script src="js/redirect.js"></script>
+    <style>
+        .result {min-width: fit-content;}
+        .result th, .result td {
+            text-align: left;
+            padding: 7px 20px;
+        }
+        .result td .btn {margin: 0 3px;}
+    </style>
+</head>
+<body>
+    <header class="teal-bg">
+        <a href="/">RS Compiler</a>
+        <nav>
+            <a href="/school-info.html">Settings</a>
+        </nav>
+    </header>
+    <main>
+        <h1 id="school">School Name</h1>
+        <h2><span id="class"></span> Students List</h2>
+        <div class="sheet">
+            <table class="result">
+                <tr>
+                    <th>Name</th>
+                    <th>Action</th>
+                </tr>
+            </table>
+        </div>
+        <div class="text-right">
+            <p id="record">Students Number: <span id="no">5</span></p>
+            <button onclick="goto('add-report-sheet.html')" class="btn">Add report sheet</button>
+        </div>
+    </main>
+
+    <div class="box">
+        <div class="msg">
+            <h3 class="title">My message</h3>
+            <p class="body">Are you sure, you want to delete <q id="name">Student Name</q>?</p>
+            <button class="btn bg-red" onclick="deleteStudent()">Yes</button>
+            <button class="btn bg-green" onclick="closeBox()">No</button>
+        </div>
+    </div>
+
+    <footer class="teal-bg">
+        <p>Designed and Developed by <a href="http://github.com/uadam12">Usman Adam Imam</a></p>
+    </footer>
+
+    <script src="js/student-list.js"></script>
+</body>
+</html>

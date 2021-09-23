@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Information</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/school-info.css">
+    <script src="js/functions.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/msg.js"></script>
+</head>
+<body>
+    <header class="teal-bg">
+        <a href="/">RS Compiler</a>
+        <nav>
+            <a href="/dashboard.html">Dashboard</a>
+            <a href="/add-report-sheet.html">Add record</a>
+        </nav>
+    </header>
+    <main>
+        <h1>School Information</h1>
+
+        <div class="school-info">
+            <label for="school-name">School Name</label>
+            <input type="text" id="school-name" placeholder="Enter school name">
+            <label for="test">Test Score</label>
+            <input type="number" min="0" max="20" id="test" placeholder="Enter maximum test score">
+            <p>School Level</p>
+            <div id="level">
+                <button onclick="selectLevel(this)" class="btn" id="Primary">Primary</button>
+                <button onclick="selectLevel(this)" class="btn" id="JSS">JSS</button>
+                <button onclick="selectLevel(this)" class="btn" id="SSS">SSS</button>
+            </div>
+            <label>Class Involved</label>
+            <div>
+                <div class="class-info">
+                    <select onchange="generateSection()" name="class" id="class">
+                        <option value="" selected disabled>Select Class</option>
+                    </select>
+                    <select name="section" id="section">
+                        <option value="" selected disabled>Select section</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <h2>Select your subjects</h2>
+        <ul id="subject"></ul>
+        <h2>Add new subject</h2>
+        <div class="new-subject">
+            <input type="text" placeholder="Enter subject name" id="new-subject">
+            <button onclick="addNewSubject(this)" class="btn">Add Subject</button>
+        </div>
+        <div class="text-right save">
+            <button onclick="displaySchoolInfo()" class="btn">Reset</button>
+            <button onclick="updateSchoolInfo()" class="btn">Confirm</button>
+        </div>
+    </main>
+
+    <footer class="teal-bg">
+        <p>Designed and Developed by <a href="http://github.com/uadam12">Usman Adam Imam</a></p>
+    </footer>
+
+    <script src="js/school-info.js"></script>
+</body>
+</html>
